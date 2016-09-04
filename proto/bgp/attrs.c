@@ -1136,8 +1136,8 @@ bgp_import_control(struct proto *P, rte **new, ea_list **attrs, struct linpool *
   struct bgp_proto *new_bgp = (e->attrs->src->proto->proto == &proto_bgp) ?
     (struct bgp_proto *) e->attrs->src->proto : NULL;
 
-  if (p == new_bgp)			/* Poison reverse updates */
-    return -1;
+  //if (p == new_bgp)			/* Poison reverse updates */
+  //  return -1;
   if (new_bgp)
     {
       /* We should check here for cluster list loop, because the receiving BGP instance
